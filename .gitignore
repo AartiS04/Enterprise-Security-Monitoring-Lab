@@ -1,0 +1,22 @@
+# Sensitive telemetry, secrets and captures
+*.pcap
+*.pcapng
+*.etl
+*.evtx
+archives.json
+alerts.json
+*.key
+*.pem
+*.p12
+*.pfx
+*.kdbx
+*.env
+.env.*
+*credentials*
+*password*
+*secret*
+*ossec.conf
+*.bak
+*.bak-*
+.DS_Store
+Thumbs.db
