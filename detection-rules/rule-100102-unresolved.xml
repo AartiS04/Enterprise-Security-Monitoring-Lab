@@ -1,0 +1,12 @@
+<!-- EXPERIMENTAL / UNRESOLVED: configuration validated but no alert observed -->
+<group name="windows,sysmon,network_monitoring,">
+  <rule id="100102" level="7">
+    <if_group>sysmon_event3</if_group>
+    <field name="win.system.eventID">^3$</field>
+    <field name="win.eventdata.image" type="pcre2">(?i)\\powershell\.exe$</field>
+    <field name="win.eventdata.protocol">^tcp$</field>
+    <field name="win.eventdata.destinationPort">^443$</field>
+    <description>LAB: PowerShell initiated a TCP connection to port 443</description>
+    <group>sysmon_event3,custom_detection,</group>
+  </rule>
+</group>
